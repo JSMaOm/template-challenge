@@ -104,6 +104,16 @@ section {
 .flex-wrapper {
     display: flex;
 }
+
+::-moz-selection {
+    background-color: #8dbf3b;
+    color: #fff;
+}
+
+::selection {
+    background-color: #8dbf3b;
+    color: #fff;
+}
 /**************/
 
 /****** HEADER ******/
