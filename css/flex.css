@@ -1,0 +1,63 @@
+/*
+		Here are some examples of differences between old and new.
+		This is why we can't have nice things.
+		But also, autoprefixer saves headaches.
+	*/
+
+	.display {
+
+		/* Current */
+		display:flex;
+		display:inline-flex;
+
+		/* older */
+		display:-webkit-flex;
+		display:-ms-flexbox;
+		display:-webkit-box;
+	}
+	.axes {
+
+		/* Current */
+		justify-content: flex-start;
+
+		align-items: stretch;
+
+
+		/* older */
+		-ms-flex-pack: start;
+		-webkit-justify-content:flex-start;
+		-webkit-box-pack:start
+
+		-webkit-box-align:stretch;
+		-webkit-align-items:stretch;
+		-ms-flex-align:stretch;
+
+
+	}
+	.directions {
+
+		/* Current */
+		order: 1;
+		flex-wrap: wrap;
+		flex-direction: column;
+		/* older */
+
+		-webkit-box-wrap:wrap;
+		-webkit-flex-wrap:wrap;
+		-ms-flex-wrap:wrap;
+
+		-ms-flex-direction:column;
+		-webkit-box-orient:vertical;
+		-webkit-box-direction: normal;
+
+	}
+	.flexin {
+		/* current */
+		flex:1 0 30%;
+
+		/* older */
+		-webkit-box-flex:1;
+		-webkit-flex:1 0 30%;
+		-ms-flex:1 0 30%;
+
+	}

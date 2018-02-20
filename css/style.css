@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900');
+
+/*
+@main colors:
+color-1: #5a7d22;
+color-2: #ffe521;
+color-3: #8dbf3b;
+color-4: #8dcaff;
+
+*/
+/******  ******/
+/**************/
+
+
+/****** General ******/
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+h2,
+h3 {
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #aaa;
+}
+
+p {
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+
+.btn:link,
+.btn:visited {
+    background-color: #5a7d22;
+    border-radius: 5px;
+    margin-top: 2rem;
+    box-shadow: 5px 5px 1rem rgba(0,0,0,.4);
+    text-decoration: none;
+    display: inline-block;
+    padding: 2rem 4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all .4s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #8dcaff;
+}
+
+.btn-blue:link,
+.btn-blue:visited  {
+    background-color: #8dcaff;
+}
+
+.btn-blue:hover,
+.btn-blue:active {
+    background-color: #5a7d22;
+}
+
+section {
+    width: 100%;
+    padding: 8rem 0;
+}
+
+.right-side ,
+.left-side {
+    width: 50%;
+}
+
+.container {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.flex-wrapper {
+    display: flex;
+}
+/**************/
+
+/****** HEADER ******/
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), 
+                url(../images/banner.jpg) 0 0 no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    padding: 4rem 3rem 0;  
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: all .4s;
+}
+
+.nav-fix {
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,.4);
+    color: #333;
+    padding: 1.5rem 3rem 0; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar p, 
+.navbar span {
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 0;
+    transition: all .4s;    
+}
+
+.nav-fix  p, 
+.nav-fix  span {
+    color: #333;
+}
+
+.navbar span {
+    font-weight: 900;
+}
+
+.navbar li a:link,
+.navbar li a:visited {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-bottom: 1px solid transparent;
+    border-radius: 1.5rem;
+    transition: all .4s;
+}
+
+.nav-fix li a:link,
+.nav-fix li a:visited {
+    color: #333;
+}
+
+.navbar li a:hover,
+.navbar li a:active {
+    color: #8dbf3b;
+    border-bottom: 1px solid #8dbf3b;
+}
+
+#header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#header-text h1,
+#header-text p {
+    text-transform: uppercase;
+    color: #fff;    
+}
+
+#header-text h1 {
+    font-size:4rem;
+    letter-spacing: 5px;
+}
+
+#header-text p {
+    padding: 0 7rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+/**************/
+
+/****** SECTION GENERIC ******/
+#generic .left-side,
+#generic .right-side {
+    padding: 0 4rem;
+}
+
+/**************/
+
+/****** SECTION CORNER ******/
+#corner {
+    background-color: #efefef;
+    text-align: center;
+}
+
+#corner h2 {
+    margin-bottom: 2rem;
+}
+
+#corner h3 {
+    margin-bottom: 5rem;
+}
+
+#corner figure {
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+}
+
+#corner figure img {
+    width: 100%;
+}
+
+#corner figure figcaption {
+    padding: 2rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#corner a {
+    margin: 5rem 1.5rem 0;
+}
+/**************/
+
+
+/****** PLACES ******/
+
+#places h2 {
+    margin-bottom: 1rem;
+}
+
+#places h3 {
+    margin-bottom: 1rem;
+}
+
+.place-desc {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start; 
+    margin: 4rem;
+    margin-bottom: 0;
+}
+
+.right-side .place-desc {
+    flex-direction: row;
+    margin-right: 0;
+}
+
+.right-side .place-desc img {
+    margin-right: 2rem;
+}
+
+.left-side .place-desc {
+    text-align: right;
+    margin-left: 0;
+}
+
+.left-side .place-desc img {
+    margin-left: 2rem;
+}
+
+.place-desc h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.place-desc h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.place-desc p {
+    margin-top: 1rem;
+}
+
+.place-desc img {
+    border-radius: 50%;
+    border: 5px solid #bbb;
+}
+
+/**************/
+
+/****** SECTION CONTACT-US ******/
+#contact-us {
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)) ,
+                url(../images/banner.jpg) no-repeat;
+    background-position: 75%;
+    background-size: cover;
+    text-align: center;
+}
+
+#contact-us h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+/**************/
+
+
+/****** FOOTER ******/
+footer {
+    width: 100%;
+    padding: 7rem 0;
+    text-align: center;
+    color: #aaa;
+}
+
+footer a:link,
+footer a:visited {
+    display: inline-block;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: all .3s;
+}
+
+footer a:hover,
+footer a:active {
+    color: #000;
+    transform: scale(1.2);
+} 
+
+footer a:not(:last-child) {
+    margin-right: 3rem;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer li {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+} 
+
+footer li:not(:last-child) {
+    border-right: 1px solid #aaa;
+}
+/**************/
