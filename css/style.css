@@ -7,6 +7,14 @@ color-2: #ffe521;
 color-3: #8dbf3b;
 color-4: #8dcaff;
 
+media queries:
+extra large - 1200
+large - 992
+medium - 768
+small - 650
+
+
+
 */
 /******  ******/
 /**************/
@@ -42,15 +50,32 @@ h2 {
     font-size: 4rem;
 }
 
+
+@media screen and (max-width: 992px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
 h3 {
     font-weight: 400;
     font-size: 2.5rem;
     color: #aaa;
 }
 
+@media screen and (max-width: 992px) {
+    h3 {
+        font-size: 2rem;
+    }
+}
+
 p {
     line-height: 1.7;
     letter-spacing: 1px;
+}
+
+.show {
+    display: block !important;
 }
 
 .btn:link,
@@ -95,6 +120,14 @@ section {
     width: 50%;
 }
 
+@media screen and  (max-width: 650px) {
+    .right-side ,
+    .left-side {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .container {
     width: 85%;
     padding: 0 15px;
@@ -103,6 +136,14 @@ section {
 
 .flex-wrapper {
     display: flex;
+    flex-direction: row;
+}
+
+@media screen and  (max-width: 650px) {
+    .flex-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 ::-moz-selection {
@@ -139,11 +180,98 @@ header {
     transition: all .4s;
 }
 
+@media screen and (max-width: 1200px) {
+    .navbar {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
 .nav-fix {
     background-color: #fff;
     box-shadow: 0 0 1rem rgba(0,0,0,.4);
     color: #333;
     padding: 1.5rem 3rem 0; 
+}
+
+.nav-icon-holder {
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 9px;
+    right: 51px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-icon-holder {
+        display: inline-block;
+    }
+}
+
+.nav-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: all .4s;
+}
+
+.nav-fix .nav-icon {
+    background-color: #333;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 3rem;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50px;
+    transform-origin: 0;
+    transition: all .4s;
+}
+
+.nav-fix .nav-icon::before,
+.nav-fix .nav-icon::after {
+    background-color: #333;
+}
+
+.nav-icon::before {
+    transform: translateY(-10px) rotate(0);
+}
+
+.nav-icon::after {
+    transform: translateY(10px) rotate(0);
+}
+
+.nav-fix .nav-icon-clicked .nav-icon {
+    background-color: transparent;
+}
+
+.nav-icon-clicked .nav-icon {
+    background-color: transparent;
+}
+
+.nav-icon-clicked .nav-icon::before {
+    transform: translateY(-11px) rotate(45deg);
+}
+
+.nav-icon-clicked .nav-icon::after {
+    transform: translateY(10px) rotate(-45deg);
 }
 
 .navbar ul {
@@ -152,10 +280,30 @@ header {
     margin: 0;
     display: flex;
     justify-content: space-between;
+    transition: all .4s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        width: 100%;
+        margin-top: 4rem;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .navbar li {
     display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar li {
+        display: block;
+        width: 100%;
+        flex: 1 1;
+    }
 }
 
 .navbar p, 
@@ -167,6 +315,14 @@ header {
     font-size: 1.6rem;
     margin: 0;
     transition: all .4s;    
+}
+
+
+@media screen and (max-width: 992px) {
+    .navbar p, 
+    .navbar span {
+        line-height: 35px
+    }
 }
 
 .nav-fix  p, 
@@ -191,6 +347,26 @@ header {
     border-bottom: 1px solid transparent;
     border-radius: 1.5rem;
     transition: all .4s;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar li a:link,
+    .navbar li a:visited {
+        padding: 1rem 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar li a:link,
+    .navbar li a:visited {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        border-bottom: 1px solid transparent;
+        border-radius: 1.5rem;
+        transition: all .4s;
+    }
 }
 
 .nav-fix li a:link,
@@ -223,12 +399,39 @@ header {
     letter-spacing: 5px;
 }
 
+@media screen and (max-width: 1200px) {
+    #header-text h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #header-text {
+        width: 90%;
+    }
+}
+
 #header-text p {
     padding: 0 7rem;
     font-weight: 300;
     font-size: 1.8rem;
     line-height: 30px;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 992px) {
+    #header-text p {
+        padding: 0 5rem;
+        font-size: 1.6rem;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 650   px) {
+    #header-text p {
+        padding: 0 3rem;
+    }
 }
 /**************/
 
@@ -292,6 +495,12 @@ header {
     margin-bottom: 0;
 }
 
+@media screen and  (max-width: 650px) { 
+    .place-desc {
+        margin-left: 0 !important;
+    }
+}
+
 .right-side .place-desc {
     flex-direction: row;
     margin-right: 0;
@@ -306,8 +515,22 @@ header {
     margin-left: 0;
 }
 
+@media screen and (max-width: 992px) {
+    .place-desc {
+        flex-direction: column !important; 
+        text-align: left !important;
+    }
+}
+
 .left-side .place-desc img {
     margin-left: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+    .place-desc img {
+        margin-left: 0 !important   ;
+        margin-bottom: 2rem;
+    }
 }
 
 .place-desc h2 {
@@ -325,6 +548,8 @@ header {
 }
 
 .place-desc img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 5px solid #bbb;
 }
